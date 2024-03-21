@@ -8,6 +8,17 @@ token = os.getenv("DISCORD_TOKEN")
 intents = discord.Intents.default()
 client = discord.Client(intents=intents)
 
+def factorio(message):
+    nm = message.channel.send("factorio...")
+
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+    if message.content == "factorio":
+        factorio(message)
+
 @client.event
 async def on_ready():
     for guild in client.guilds:
