@@ -14,6 +14,7 @@ def factorio(message):
 
 @client.event
 async def on_message(message):
+    print(message.content)
     if message.author == client.user:
         return
     if message.content == "factorio":
