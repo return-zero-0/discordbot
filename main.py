@@ -14,11 +14,11 @@ def factorio(message):
 
 @client.event
 async def on_message(message):
-    print(message.content.lower)
+    print(message.content.lower())
     if message.author == client.user:
         return
-    if message.content.lower == "factorio":
-        factorio(message.content.lower)
+    if message.content.lower() == "factorio":
+        factorio(message.content.lower())
 
 @client.event
 async def on_ready():
